@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Artists Component renders the Artists list 1`] = `<ul />`;
