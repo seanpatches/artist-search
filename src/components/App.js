@@ -3,8 +3,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route } from 'react-router-dom';
-import ArtistSearch from './ArtistSearch';
+import AllArtists from '../containers/AllArtists';
 
 export default function App() {
-  return <ArtistSearch searchTerm="banana" />;
+  return <AllArtists />;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Artist({ name }) {
-  return <span>Name: {name}</span>;
+  return <span>{name}</span>;
 }
 
 Artist.propTypes = {

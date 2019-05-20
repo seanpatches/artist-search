@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ArtistSearch({ searchTerm, bananaHandler }) {
+function ArtistSearch({ searchTerm, searchHandler, changeHandler }) {
   return (
     <header>
       <h1>Artist Search</h1>
-      <form>
-        <input type="text" name="text" value={searchTerm} />
-        <button onSubmit={bananaHandler}>Search</button>
+      <form onSubmit={searchHandler} >
+        <input type="text" name="searchTerm" value={searchTerm} onChange={changeHandler} />
+        <button>Search</button>
       </form>
     </header>
   );
@@ -15,7 +15,8 @@ function ArtistSearch({ searchTerm, bananaHandler }) {
 
 ArtistSearch.propTypes = {
   searchTerm: PropTypes.string.isRequired,
-  bananaHandler: PropTypes.func.isRequired
+  searchHandler: PropTypes.func.isRequired,
+  changeHandler: PropTypes.func.isRequired
 };
 
 export default ArtistSearch;

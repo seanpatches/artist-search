@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 
 function Artists({ artists }) {
   const artistList = artists.map(artist => {
-    <li key={artist.id}>
-      <Artist name={artist.name} />
-    </li>;
+    return (
+      <li key={artist.id}>
+        <Artist name={artist.name} />
+      </li>
+    );
   });
 
   return (
