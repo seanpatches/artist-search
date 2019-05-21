@@ -1,17 +1,23 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import Releases from '../components/releases/Releases';
 import fetchReleases from '../services/fetchReleases';
 import Paging from '../components/Paging';
 
 export default class AllReleases extends PureComponent {
-  state = {
-    releases: null,
-    artistId: (window.location.pathname).slice(10),
-    offset: 0,
-    page: 1,
-    totalPages: 0
+  static propTypes = {
+    match: PropTypes.object.isRequired
   }
 
+  state = {
+    releases: null,
+    artistId: this.props.match.params.artistId,
+    offset: 0,
+    page: 1,
+    totalPages: 0,
+    artist: this.props.match.params.artist
+  }
+  
   releasesLoad = () =>{
     const { artistId, offset } = this.state;
     fetchReleases(artistId, offset)
@@ -53,12 +59,12 @@ export default class AllReleases extends PureComponent {
   }
 
   render() {
-    const { releases, totalPages, page } = this.state;
+    const { releases, totalPages, page, artist } = this.state;
     return (
       <>
         <Paging currentPage={page} totalPages={totalPages} nextPage={this.nextPage} previousPage={this.previousPage} />
 
-        {releases && <Releases releases={releases} />}
+        {releases && <Releases releases={releases} artist={artist}/>}
       </>
     );
   }

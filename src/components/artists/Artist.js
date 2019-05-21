@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 function Artist({ name, id }) {
-  return <Link to={`/releases/${id}`}>{name}</Link>;
+  return <Link to={`/releases/${name}/${id}`}>{name}</Link>;
 }
 
 Artist.propTypes = {
