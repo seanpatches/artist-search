@@ -5,8 +5,7 @@ function fetchArtists(searchTerm, offset) {
       if(!ok) throw 'Unable to fetch Artists';
 
       return json;
-    })
-    .then(json => json.artists);
+    });
 }
 
 
