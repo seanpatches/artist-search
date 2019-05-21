@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 
-function Release({ releaseName, releaseId }) {
+function Release({ releaseArt, releaseName, releaseId }) {
   return (
     <Link to={`/songs/${releaseId}`}>
-      {/* <img src={`${releaseArt}`} /> */}
+      <img width="100px" src={`${releaseArt}`} />
       {releaseName}
     </Link>
   );
