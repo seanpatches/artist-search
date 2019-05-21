@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
-import ArtistSearch from '../components/artists/ArtistSearch';
 import Artists from '../components/artists/Artists';
 import fetchArtists from '../services/fetchArtists';
 import Paging from '../components/Paging';
 
 export default class AllArtists extends PureComponent{
+  searchParams = new URLSearchParams(window.location.search);
   state = {
-    searchTerm: '',
+    searchTerm: this.searchParams.get('searchTerm'),
     artists: [],
     offset: 0,
     page: 1,
@@ -31,17 +31,12 @@ export default class AllArtists extends PureComponent{
     });
   }
 
-  searchHandler = event => {
-    event.preventDefault();
+  componentDidMount() {
     fetchArtists(this.state.searchTerm, this.state.offset)
       .then(response => {
         const { artists, count, offset } = response;
         return this.setState({ page: 1, artists: artists, totalPages: Math.ceil(count / 25), offset: offset });
       });
-  }
-
-  changeHandler = ({ target }) => {
-    this.setState({ [target.name]: target.value });
   }
 
   componentDidUpdate(_, prevState) {
@@ -54,10 +49,9 @@ export default class AllArtists extends PureComponent{
   }
 
   render() {
-    const { artists, searchTerm, page, totalPages } = this.state;
+    const { artists, page, totalPages } = this.state;
     return (
       <>
-        <ArtistSearch searchTerm={searchTerm} searchHandler={this.searchHandler} changeHandler={this.changeHandler} />
         <Paging currentPage={page} totalPages={totalPages} nextPage={this.nextPage} previousPage={this.previousPage} />
         <Artists artists={artists} />
       </>

@@ -7,11 +7,13 @@ import AllArtists from '../containers/AllArtists';
 import AllReleases from '../containers/AllReleases';
 import AllSongs from '../containers/AllSongs';
 import Lyrics from '../containers/Lyrics';
+import Header from './Header';
 
 export default function App() {
   return (
   <>
       <Router>
+        <Header />
         <Switch>
           <Route exact path="/" component={AllArtists}></Route>
           <Route path="/releases/:artist/:artistId" component={AllReleases}></Route>
