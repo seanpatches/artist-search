@@ -5,6 +5,7 @@ import {
   Route } from 'react-router-dom';
 import AllArtists from '../containers/AllArtists';
 import AllReleases from '../containers/AllReleases';
+import AllSongs from '../containers/AllSongs';
 
 export default function App() {
   return (
@@ -13,8 +14,8 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={AllArtists}></Route>
           <Route path="/releases/:artistId" component={AllReleases}></Route>
-          {/* <Route path="/songs/:releaseId" component={AllSongs}></Route>
-          <Route path="/lyrics/:songId" component={Lyrics}></Route> */}
+          <Route path="/songs/:releaseId" component={AllSongs}></Route>
+          {/* <Route path="/lyrics/:songId" component={Lyrics}></Route> */}
         </Switch>
       </Router>
     </>

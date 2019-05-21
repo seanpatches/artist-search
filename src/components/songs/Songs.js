@@ -6,7 +6,7 @@ function Songs({ songs }) {
   const songList = songs.map(song => {
     return (
       <li key={song.id}>
-        <Song songName={song.title} songId={song.id} />
+        <Song songTitle={song.title} songId={song.id} />
       </li>
     );
   });
