@@ -1,8 +1,9 @@
 import React, { PureComponent } from 'react';
-import ArtistSearch from '../components/ArtistSearch';
-import Artists from '../components/Artists';
+import ArtistSearch from '../components/artists/ArtistSearch';
+import Artists from '../components/artists/Artists';
 import fetchArtists from '../services/fetchArtists';
 import Paging from '../components/Paging';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 export default class AllArtists extends PureComponent{
   state = {
@@ -45,7 +46,6 @@ export default class AllArtists extends PureComponent{
   }
 
   componentDidUpdate(_, prevState) {
-    console.log(prevState, this.state);
     if(this.state.page === prevState.page) return null;
     fetchArtists(this.state.searchTerm, this.state.offset)
       .then(response => {
@@ -58,9 +58,11 @@ export default class AllArtists extends PureComponent{
     const { artists, searchTerm, page, totalPages } = this.state;
     return (
       <>
-      <ArtistSearch searchTerm={searchTerm} searchHandler={this.searchHandler} changeHandler={this.changeHandler} />
-      <Paging currentPage={page} totalPages={totalPages} nextPage={this.nextPage} previousPage={this.previousPage} />
-      <Artists artists={artists} />
+      <Router>
+        <ArtistSearch searchTerm={searchTerm} searchHandler={this.searchHandler} changeHandler={this.changeHandler} />
+        <Paging currentPage={page} totalPages={totalPages} nextPage={this.nextPage} previousPage={this.previousPage} />
+        <Artists artists={artists} />
+      </Router>
       </>
     );
   }
