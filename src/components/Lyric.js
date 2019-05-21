@@ -14,7 +14,7 @@ function Lyric({ artist, title, lyrics }) {
 Lyric.propTypes = {
   artist: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  lyrics: PropTypes.string.isRequired
+  lyrics: PropTypes.string
 };
 
 export default Lyric;

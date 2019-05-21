@@ -6,7 +6,7 @@ import Paging from '../components/Paging';
 export default class AllArtists extends PureComponent{
   searchParams = new URLSearchParams(window.location.search);
   state = {
-    searchTerm: this.searchParams.get('searchTerm'),
+    searchTerm: this.searchParams.get('searchTerm') || 'Billy Strings',
     artists: [],
     offset: 0,
     page: 1,
