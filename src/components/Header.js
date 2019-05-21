@@ -12,7 +12,6 @@ class Header extends PureComponent {
     searchTerm: '',
   }
   
-
   searchHandler = () => {
     console.log(this.props);
     this.props.history.push(`/?searchTerm=${this.searchTerm}`);
@@ -31,4 +30,3 @@ class Header extends PureComponent {
 }
 
 export default withRouter(Header);
-

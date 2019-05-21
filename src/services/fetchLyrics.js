@@ -5,5 +5,3 @@ function fetchLyrics(artist, title) {
 }
 
 export default fetchLyrics;
-
-

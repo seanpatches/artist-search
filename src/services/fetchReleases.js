@@ -25,5 +25,4 @@ function fetchReleases(artistId, offset) {
     });
 }
 
-
 export default fetchReleases;
