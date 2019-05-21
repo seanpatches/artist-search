@@ -3,10 +3,11 @@ import Release from './Release';
 import PropTypes from 'prop-types';
 
 function Releases({ releases }) {
+  console.log(releases);
   const releaseList = releases.map(release => {
     return (
       <li key={release.id}>
-        <Release name={release.name} id={release.id} />
+        <Release releaseName={release.title} releaseId={release.id} />
       </li>
     );
   });
@@ -17,11 +18,7 @@ function Releases({ releases }) {
 }
 
 Releases.propTypes = {
-  releases: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
-    art: PropTypes.string.isRequired
-  }))
+  releases: PropTypes.array.isRequired
 };
 
 export default Releases;

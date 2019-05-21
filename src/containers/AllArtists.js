@@ -3,7 +3,6 @@ import ArtistSearch from '../components/artists/ArtistSearch';
 import Artists from '../components/artists/Artists';
 import fetchArtists from '../services/fetchArtists';
 import Paging from '../components/Paging';
-import { BrowserRouter as Router } from 'react-router-dom';
 
 export default class AllArtists extends PureComponent{
   state = {
@@ -58,11 +57,9 @@ export default class AllArtists extends PureComponent{
     const { artists, searchTerm, page, totalPages } = this.state;
     return (
       <>
-      <Router>
         <ArtistSearch searchTerm={searchTerm} searchHandler={this.searchHandler} changeHandler={this.changeHandler} />
         <Paging currentPage={page} totalPages={totalPages} nextPage={this.nextPage} previousPage={this.previousPage} />
         <Artists artists={artists} />
-      </Router>
       </>
     );
   }
