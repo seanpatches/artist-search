@@ -6,7 +6,7 @@ function Artists({ artists }) {
   const artistList = artists.map(artist => {
     return (
       <li key={artist.id}>
-        <Artist name={artist.name} />
+        <Artist name={artist.name} id={artist.id} />
       </li>
     );
   });

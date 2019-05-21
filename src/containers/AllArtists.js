@@ -36,7 +36,7 @@ export default class AllArtists extends PureComponent{
     fetchArtists(this.state.searchTerm, this.state.offset)
       .then(response => {
         const { artists, count, offset } = response;
-        return this.setState({ artists: artists, totalPages: Math.ceil(count / 25), offset: offset });
+        return this.setState({ page: 1, artists: artists, totalPages: Math.ceil(count / 25), offset: offset });
       });
   }
 
