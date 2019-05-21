@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`release test renders the release 1`] = `
+<Link
+  to="/lyrics/undefined/undefined"
+/>
+`;

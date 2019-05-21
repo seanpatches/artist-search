@@ -18,7 +18,7 @@ function Songs({ songs, artist }) {
 
 Songs.propTypes = {
   songs: PropTypes.array.isRequired,
-  artist: PropTypes.string.isRequired
+  artist: PropTypes.string
 };
 
 export default Songs;

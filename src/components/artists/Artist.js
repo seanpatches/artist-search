@@ -7,8 +7,8 @@ function Artist({ name, id }) {
 }
 
 Artist.propTypes = {
-  name: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired
+  name: PropTypes.string,
+  id: PropTypes.string
 };
 
 export default Artist;
