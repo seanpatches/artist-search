@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Releases from '../components/releases/Releases';
 import fetchReleases from '../services/fetchReleases';
 import Paging from '../components/Paging';
+import styles from './style/AllReleases.css';
 
 export default class AllReleases extends PureComponent {
   static propTypes = {
@@ -61,7 +62,7 @@ export default class AllReleases extends PureComponent {
   render() {
     const { releases, totalPages, page, artist } = this.state;
     return (
-      <section>
+      <section className={styles.AllReleases}>
         <Paging currentPage={page} totalPages={totalPages} nextPage={this.nextPage} previousPage={this.previousPage} />
         {releases && <Releases releases={releases} artist={artist}/>}
       </section>

@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import Artists from '../components/artists/Artists';
 import fetchArtists from '../services/fetchArtists';
 import Paging from '../components/Paging';
+import styles from './style/AllArtists.css';
 
 export default class AllArtists extends PureComponent{
   searchParams = new URLSearchParams(window.location.search);
@@ -51,7 +52,7 @@ export default class AllArtists extends PureComponent{
   render() {
     const { artists, page, totalPages } = this.state;
     return (
-      <section>
+      <section className={styles.AllArtists}>
         <>
           <Paging currentPage={page} totalPages={totalPages} nextPage={this.nextPage} previousPage={this.previousPage} />
         </>

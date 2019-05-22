@@ -1,7 +1,7 @@
 import React from 'react';
 import Song from './Song';
 import PropTypes from 'prop-types';
-
+import styles from '../style/Songs.css';
 function Songs({ songs, artist }) {
   const songList = songs.map(song => {
     return (
@@ -12,7 +12,7 @@ function Songs({ songs, artist }) {
   });
 
   return (
-    <ul>{songList}</ul>
+    <ul className={styles.Songs}>{songList}</ul>
   );
 }
 

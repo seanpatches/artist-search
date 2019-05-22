@@ -1,24 +1,19 @@
-:local(.Releases){
+:local(.Songs){
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 150vh;
+  height: 90vh;
   list-style-type: none;
-  width: 90vw;
+  width: 100vw;
 
   li{
-    
-    display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 20vw;
+    display: flex;
     margin: 1px;
-    font-size: 12px
+    font-size: 30px
   }
 
   a {
-  color: white;
+    color: white;
     text-decoration: none;
     transition: all .2s ease-in-out;
   }
@@ -26,9 +21,9 @@
   a:visited{
     color: white;
   }
-  
+    
   a:hover{
     transform: scale(1.2);
     color: blue;
-  }
+  } 
 }

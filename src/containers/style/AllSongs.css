@@ -1,8 +1,12 @@
-:local(.AllArtists) {
+:local(.AllSongs){
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 3vh;
 
+  ul{
+    display: flex;
+    align-items: center;
+}
 }
