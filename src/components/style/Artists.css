@@ -1,0 +1,27 @@
+:local(.Artists){
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 50vh;
+  list-style-type: none;
+  width: 90vw;
+
+  li{
+    margin: 1px;
+    font-size: 30px
+  }
+
+      a {
+      color: white;
+      text-decoration: none;
+      transition: all .2s ease-in-out;
+    }
+    a:visited{
+      color: white;
+    }
+    
+    a:hover{
+      transform: rotate(20deg);
+      color: blue;
+    } 
+}

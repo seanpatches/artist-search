@@ -61,11 +61,10 @@ export default class AllReleases extends PureComponent {
   render() {
     const { releases, totalPages, page, artist } = this.state;
     return (
-      <>
+      <section>
         <Paging currentPage={page} totalPages={totalPages} nextPage={this.nextPage} previousPage={this.previousPage} />
-
         {releases && <Releases releases={releases} artist={artist}/>}
-      </>
+      </section>
     );
   }
 }

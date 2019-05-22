@@ -11,7 +11,7 @@ import Header from './Header';
 
 export default function App() {
   return (
-  <>
+    <section>
       <Router>
         <Header />
         <Switch>
@@ -21,6 +21,6 @@ export default function App() {
           <Route path="/lyrics/:artist/:title" component={Lyrics}></Route>
         </Switch>
       </Router>
-    </>
+    </section>
   );
 }

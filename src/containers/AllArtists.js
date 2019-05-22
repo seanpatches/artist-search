@@ -51,10 +51,12 @@ export default class AllArtists extends PureComponent{
   render() {
     const { artists, page, totalPages } = this.state;
     return (
-      <>
-        <Paging currentPage={page} totalPages={totalPages} nextPage={this.nextPage} previousPage={this.previousPage} />
+      <section>
+        <>
+          <Paging currentPage={page} totalPages={totalPages} nextPage={this.nextPage} previousPage={this.previousPage} />
+        </>
         <Artists artists={artists} />
-      </>
+      </section>
     );
   }
 }
