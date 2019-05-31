@@ -1,5 +1,5 @@
 function fetchSongs(releaseId) {
-  return fetch(`http://musicbrainz.org/ws/2/recording?release=${releaseId}&fmt=json`)
+  return fetch(`https://musicbrainz.org/ws/2/recording?release=${releaseId}&fmt=json`)
     .then(res => ([res.ok, res.json()]))
     .then(([ok, json]) => {
       if(!ok) throw 'Unable to fetch songs';
