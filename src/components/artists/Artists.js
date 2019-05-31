@@ -1,6 +1,7 @@
 import React from 'react';
 import Artist from './Artist';
 import PropTypes from 'prop-types';
+import styles from '../style/Artists.css';
 
 function Artists({ artists }) {
   const artistList = artists.map(artist => {
@@ -12,7 +13,7 @@ function Artists({ artists }) {
   });
 
   return (
-    <ul>{artistList}</ul>
+    <ul className={styles.Artists}>{artistList}</ul>
   );
 }
 

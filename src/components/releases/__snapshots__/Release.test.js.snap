@@ -8,5 +8,6 @@ exports[`release test renders the release 1`] = `
     src="undefined"
     width="100px"
   />
+  <p />
 </Link>
 `;

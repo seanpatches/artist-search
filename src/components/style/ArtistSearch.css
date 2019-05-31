@@ -1,0 +1,15 @@
+header {
+  input{
+    margin-right: 10px;
+  }
+  color: whitesmoke;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4vh;
+  margin: -10px;
+  padding-bottom: 2vh;
+  background: rgb(124, 125, 126);
+}

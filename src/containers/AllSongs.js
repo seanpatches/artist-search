@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Songs from '../components/songs/Songs';
 import fetchSongs from '../services/fetchSongs';
+import styles from './style/AllSongs.css';
 
 export default class AllSongs extends PureComponent {
   static propTypes = {
@@ -23,9 +24,9 @@ export default class AllSongs extends PureComponent {
   render() {
     const { songs, artist } = this.state;
     return (
-      <>
-       {songs && <Songs songs={songs} artist={artist} />}
-      </>
+      <section className={styles.AllSongs}>
+        {songs && <Songs songs={songs} artist={artist} />}
+      </section>
     );
   }
 }

@@ -6,7 +6,7 @@ function Release({ releaseArt, releaseName, releaseId, artist }) {
   return (
     <Link to={`/songs/${artist}/${releaseId}`}>
       <img width="100px" src={`${releaseArt}`} />
-      {releaseName}
+      <p>{releaseName}</p>
     </Link>
   );
 }

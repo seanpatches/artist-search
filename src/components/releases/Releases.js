@@ -1,6 +1,7 @@
 import React from 'react';
 import Release from './Release';
 import PropTypes from 'prop-types';
+import styles from '../style/Releases.css';
 
 function Releases({ releases, artist }) {
   const releaseList = releases.map(release => {
@@ -12,7 +13,7 @@ function Releases({ releases, artist }) {
   });
   
   return (
-    <ul>{releaseList}</ul>
+    <ul className={styles.Releases}>{releaseList}</ul>
   );
 }
     

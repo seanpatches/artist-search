@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Releases test renders the Releases 1`] = `
-<ul>
+<ul
+  className="Releases"
+>
   <li
     key="dsfds"
   >
